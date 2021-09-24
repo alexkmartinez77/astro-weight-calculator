@@ -46,12 +46,12 @@ var userWeight = document.getElementById('user-weight').value;
 //Creates a variable called planetName and assigns the name of the selected planet from the drop down. 
 var planetName = document.getElementById('planets').value;
 //Creates a variable called result and assigns the value of the new calculated weight. 
-var result = calculateWeight(userWeight, planetName).toFixed(2);
+var result = calculateWeight(userWeight, planetName).toFixed(0);
 //Displays message indicating new weight on seledted planet
-document.getElementById('output').innerHTML = 'If you were on ' + planetName + ', you would weigh ' + result +'lbs!';
+if(result == 0 || result == undefined || result == 'NaN'){
+    document.getElementById('output').innerHTML = 'Please enter your weight in lbs.';
+}else{
+    document.getElementById('output').innerHTML = 'If you were to live on ' + '<span class="planetNames">' + planetName + '</span>' + ', you would weigh ' + '<span class="planetNames">'  + result + '</span>' + 'lbs!';
+
+}
 } 
-
-
-
-    // Bonus Challenges 
-    // 8. Reverse the drop down order so that the sun is first.
