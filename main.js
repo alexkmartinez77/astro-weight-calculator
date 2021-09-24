@@ -14,9 +14,10 @@ var planets = [
     ['Sun', 27.9] 
 ];
 
+// Target the select element that has the 'planets id
 var planetsList = document.getElementById('planets');
-//.forEach` `document.createElement` `document.getElementById` `.appendChild`
 
+// Populate the dropdown menu with planet names in the planets array
 planets.forEach(function(option) {
   var newOption = document.createElement('option');
 
@@ -24,7 +25,8 @@ planets.forEach(function(option) {
   newOption.innerHTML = option[0];
   planetsList.appendChild(newOption);
 })
-// Returns planet factor
+
+// Returns planet's multiplier
 function relativeSurfaceGravity(planetChosen){
     for (var i = 0; i < planets.length; i++) {
         if(planetChosen == planets[i][0]){
@@ -41,19 +43,14 @@ function calculateWeight(weight, planetName){
 function handleClickEvent(e) {
 //Creates a variable called userWeight and assigns the value of the user's weight. 
 var userWeight = document.getElementById('user-weight').value;
-console.log(userWeight);
 //Creates a variable called planetName and assigns the name of the selected planet from the drop down. 
 var planetName = document.getElementById('planets').value;
 //Creates a variable called result and assigns the value of the new calculated weight. 
-var result = calculateWeight(userWeight, planetName);
-console.log(result);
+var result = calculateWeight(userWeight, planetName).toFixed(2);
 //Displays message indicating new weight on seledted planet
 document.getElementById('output').innerHTML = 'If you were on ' + planetName + ', you would weigh ' + result +'lbs!';
 } 
 
-    // 8. Make it look nice by attaching  a style.css file to your index.html and writing some basic styling, 
-    // feel free to add classes and id's to the HTML elements as you need, 
-    // import.a google font and use it for some or all of the text on your page. 
 
 
     // Bonus Challenges 
