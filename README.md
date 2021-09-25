@@ -30,4 +30,8 @@ the Orbitron font used in the header of this app.
 [Google Fonts]: https://fonts.google.com/ 
 [Materialize]: https://materializecss.com/
 
+## Live App
+
+This App is now live and can be visited at: https://alexkmartinez77.github.io/astro-weight-calculator/
+
 
