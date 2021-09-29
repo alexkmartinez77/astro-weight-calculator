@@ -32,6 +32,6 @@ the Orbitron font used in the header of this app.
 
 ## Live App
 
-This App is now live and can be visited at: https://alexkmartinez77.github.io/astro-weight-calculator/
+This App is now live and can be visited at: https://alexkmartinez77.github.io/web102-astro-weight-calculator/
 
 
