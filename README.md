@@ -1,4 +1,4 @@
-![Astro Weight Calculator App](https://alexkmartinez77.github.io/astro-weight-calculator/images/astroApp.png)
+![Astro Weight Calculator App](https://alexkmartinez77.github.io/web102-astro-weight-calculator/images/astroApp.png)
 # Astro Weight Calculator App
 
 The Astro Weight Calculator is a simple App that shows the user what they would
