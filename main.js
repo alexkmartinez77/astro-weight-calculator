@@ -51,7 +51,7 @@ var result = calculateWeight(userWeight, planetName).toFixed(0);
 if(result == 0 || result == undefined || result == 'NaN'){
     document.getElementById('output').innerHTML = 'Please enter your weight in lbs.';
 }else{
-    document.getElementById('output').innerHTML = 'If you were to live on ' + '<span class="planetNames">' + planetName + '</span>' + ', you would weigh ' + '<span class="planetNames">'  + result + '</span>' + 'lbs!';
+    document.getElementById('output').innerHTML = `If you were to live on <span class="planetNames">${planetName}</span>, you would weigh <span class="planetNames">${result}</span> lbs!`;
 
 }
 } 
