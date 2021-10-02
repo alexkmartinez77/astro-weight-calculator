@@ -28,9 +28,10 @@ planets.forEach(function(option) {
 
 // Returns planet's multiplier
 function relativeSurfaceGravity(planetChosen){
-    for (var i = 0; i < planets.length; i++) {
-        if(planetChosen == planets[i][0]){
-            return planets[i][1];
+    for(const planet of planets){
+       const [pName, pmultiplier] = planet;
+        if(pName == planetChosen){
+            return pmultiplier;
         }
     }
 }
@@ -42,11 +43,14 @@ function calculateWeight(weight, planetName){
 
 function handleClickEvent(e) {
 //Creates a variable called userWeight and assigns the value of the user's weight. 
-var userWeight = document.getElementById('user-weight').value;
+var userWeight = parseFloat(document.getElementById('user-weight').value);
 //Creates a variable called planetName and assigns the name of the selected planet from the drop down. 
 var planetName = document.getElementById('planets').value;
+
+console.log(typeof(userWeight), typeof(planetName));
+
 //Creates a variable called result and assigns the value of the new calculated weight. 
-var result = calculateWeight(userWeight, planetName).toFixed(0);
+var result = calculateWeight(userWeight, planetName).toFixed(2);
 //Displays message indicating new weight on seledted planet
 if(result == 0 || result == undefined || result == 'NaN'){
     document.getElementById('output').innerHTML = 'Please enter your weight in lbs.';
