@@ -17,7 +17,7 @@ var planets = [
 var planetsList = document.getElementById("planets");
 
 // Populate the dropdown menu with planet names in the planets array
-planets.forEach(function (option) {
+planets.forEach((option) => {
   var newOption = document.createElement("option");
 
   newOption.value = option[0];
@@ -26,22 +26,22 @@ planets.forEach(function (option) {
 });
 
 // Returns planet's multiplier
-function relativeSurfaceGravity(planetChosen) {
+let relativeSurfaceGravity = (planetChosen) => {
   for (const planet of planets) {
     const [pName, pmultiplier] = planet;
     if (pName == planetChosen) {
       return pmultiplier;
     }
   }
-}
+};
 
 //Returns planet weight given earth weight and planet name
-function calculateWeight(weight, planetName) {
+let calculateWeight = (weight, planetName) => {
   return weight * relativeSurfaceGravity(planetName);
-}
+};
 
-function handleClickEvent(e) {
-  //Creates a variable called userWeight and assigns the value of the user's weight.
+let handleClickEvent = (e) => {
+  //Creates a variable called userWeight and assigns the value of the user's weight after converting it to a number type
   var userWeight = parseFloat(document.getElementById("user-weight").value);
   //Creates a variable called planetName and assigns the name of the selected planet from the drop down.
   var planetName = document.getElementById("planets").value;
@@ -59,4 +59,4 @@ function handleClickEvent(e) {
       "output"
     ).innerHTML = `If you were to live on <span class="planetNames">${planetName}</span>, you would weigh <span class="planetNames">${result}</span> lbs!`;
   }
-}
+};
