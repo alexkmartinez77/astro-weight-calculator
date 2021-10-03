@@ -1,31 +1,31 @@
-body{
-    background-color: black;
-    color: white;
+body {
+  background-color: black;
+  color: white;
 }
-#astroText{
-    font-family: 'Orbitron', sans-serif;
-    color: red;
-    margin-bottom: 5px !important;
+#astroText {
+  font-family: "Orbitron", sans-serif;
+  color: red;
+  margin-bottom: 5px !important;
 }
-#introText{
-    margin-bottom: 25px;
+#introText {
+  margin-bottom: 25px;
 }
-.planetNames{
-    font-family: 'Orbitron', sans-serif;
-    color: red;
+.planetNames {
+  font-family: "Orbitron", sans-serif;
+  color: red;
 }
 
-input{
-    color: white;
+input {
+  color: white;
 }
 
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
-input:-webkit-autofill:active{
-    -webkit-box-shadow: 0 0 0 30px black inset !important;
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px black inset !important;
 }
 
-input:-webkit-autofill{
-    -webkit-text-fill-color: white !important;
+input:-webkit-autofill {
+  -webkit-text-fill-color: white !important;
 }
