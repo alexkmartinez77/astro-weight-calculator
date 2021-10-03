@@ -14,14 +14,16 @@ var planets = [
 ];
 
 // Target the select element that has the 'planets id
-var planetsList = document.getElementById("planets");
+const planetsList = document.getElementById("planets");
 
 // Populate the dropdown menu with planet names in the planets array
 planets.forEach((option) => {
-  var newOption = document.createElement("option");
 
-  newOption.value = option[0];
-  newOption.innerHTML = option[0];
+  const [planetName] = option;
+  let newOption = document.createElement("option");
+
+  newOption.value = planetName;
+  newOption.innerHTML = planetName;
   planetsList.appendChild(newOption);
 });
 
@@ -42,14 +44,12 @@ let calculateWeight = (weight, planetName) => {
 
 let handleClickEvent = (e) => {
   //Creates a variable called userWeight and assigns the value of the user's weight after converting it to a number type
-  var userWeight = parseFloat(document.getElementById("user-weight").value);
+  const userWeight = parseFloat(document.getElementById("user-weight").value);
   //Creates a variable called planetName and assigns the name of the selected planet from the drop down.
-  var planetName = document.getElementById("planets").value;
-
-  console.log(typeof userWeight, typeof planetName);
+  const planetName = document.getElementById("planets").value;
 
   //Creates a variable called result and assigns the value of the new calculated weight.
-  var result = calculateWeight(userWeight, planetName).toFixed(2);
+  const result = calculateWeight(userWeight, planetName).toFixed(2);
   //Displays message indicating new weight on seledted planet
   if (result == 0 || result == undefined || result == "NaN") {
     document.getElementById("output").innerHTML =
