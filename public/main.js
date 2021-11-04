@@ -48,7 +48,7 @@ let handleClickEvent = (e) => {
   const planetName = document.getElementById("planets").value;
 
   //Creates a variable called result and assigns the value of the new calculated weight.
-  const result = calculateWeight(userWeight, planetName).toFixed(2);
+  const result = calculateWeight(userWeight, planetName);
   //Displays message indicating new weight on seledted planet
   if (result == 0 || result == undefined || result == "NaN") {
     document.getElementById("output").innerHTML =
@@ -56,6 +56,6 @@ let handleClickEvent = (e) => {
   } else {
     document.getElementById(
       "output"
-    ).innerHTML = `If you were to live on <span class="planetNames">${planetName}</span>, you would weigh <span class="planetNames">${result}</span> lbs!`;
+    ).innerHTML = `If you were on <span class="planetNames">${planetName}</span>, you would weigh <span class="planetNames">${result}</span>lbs!`;
   }
 };
