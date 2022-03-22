@@ -17,7 +17,7 @@ var planets = [
 const planetsList = document.getElementById("planets");
 
 // Populate the dropdown menu with planet names in the planets array
-planets.forEach((option) => {
+planets.slice().reverse().forEach((option) => {
   const [planetName] = option;
   let newOption = document.createElement("option");
 

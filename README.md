@@ -2,9 +2,7 @@
 # Astro Weight Calculator App
 
 The Astro Weight Calculator is a simple App that shows the user what they would
-weigh on a given planet or star. 
-then selects a planet from a dropdown menu and then hits calculate to render the
-person's equivalent weight on the selected planet or star. 
+weigh on a given planet or star. The user then selects a planet from a dropdown menu and then hits calculate to render the person's equivalent weight on the selected planet or star. 
 
 ## How It Works
 
