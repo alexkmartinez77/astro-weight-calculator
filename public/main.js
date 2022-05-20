@@ -43,7 +43,7 @@ let calculateWeight = (weight, planetName) => {
 
 let handleClickEvent = (e) => {
   //Creates a variable called userWeight and assigns the value of the user's weight after converting it to a number type
-  const userWeight = parseFloat(document.getElementById("user-weight").value);
+  const userWeight = Math.round(document.getElementById("user-weight").value);
   //Creates a variable called planetName and assigns the name of the selected planet from the drop down.
   const planetName = document.getElementById("planets").value;
 
